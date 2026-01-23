@@ -1,0 +1,6 @@
+sleep 300 &   → runs process in background
+jobs          → shows background jobs
+ps aux        → lists all processes
+grep          → filters output
+kill PID      → terminates a process
+kill -9 PID   → force kill
