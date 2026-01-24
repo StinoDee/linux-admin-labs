@@ -1,0 +1,7 @@
+Day 8 – Services & systemctl
+
+- systemctl manages system services
+- status shows health and logs
+- enable/disable controls boot persistence
+- journalctl shows service logs
+- Stopped or failed services can indicate attacks or misconfigurations
