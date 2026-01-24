@@ -1,0 +1,6 @@
+./README.md:echo Linux is powerful
+./README.md:Linux is powerful
+./README.md:Learning Linux security
+./linux_lines.txt:echo Linux is powerful
+./linux_lines.txt:Linux is powerful
+./linux_lines.txt:Learning Linux security

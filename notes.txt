@@ -1,0 +1,7 @@
+Day 5 – Networking Basics
+
+ip a        → show network interfaces
+ip route    → show routing table
+ss -tuln    → list listening ports
+ping        → test connectivity
+curl        → test HTTP services

@@ -1,0 +1,3 @@
+echo Linux is powerful
+Linux is powerful
+Learning Linux security
