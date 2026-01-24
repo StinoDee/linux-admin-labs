@@ -1,0 +1,7 @@
+Day 6 – Firewall Basics (UFW)
+
+ufw status            → check firewall
+ufw enable            → enable firewall
+ufw allow ssh         → allow SSH
+ufw deny 80           → block HTTP
+ufw status numbered   → view rules with numbers
