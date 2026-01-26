@@ -1,3 +1,32 @@
+DAY 9 – systemd Timers, Sockets & Dependencies
+
+1) Commands used for timers
+- systemctl list-timers
+- systemctl status mylab.timer
+- systemctl start|stop mylab.timer
+- systemctl enable|disable mylab.timer
+- systemctl daemon-reload
+
+Timers replace cron by using systemd units.
+They trigger services based on time or events.
+
+2) How socket activation works
+- A .socket unit listens on a port or IPC socket
+- systemd starts the related .service ONLY when traffic arrives
+- Improves performance and reduces resource usage
+- Example:
+  ssh.socket → ssh.service
+
+3) Dependency exploration
+- systemctl list-dependencies <unit>
+- systemctl list-dependencies --reverse <unit>
+- Wants= : soft dependency
+- Requires= : hard dependency
+- After= / Before= : order only, not dependency
+
+Key learning:
+systemd manages startup order, activation, and relationships
+between services using unit dependencies.
 Day 8 – Services & systemctl
 
 - systemctl manages system services
