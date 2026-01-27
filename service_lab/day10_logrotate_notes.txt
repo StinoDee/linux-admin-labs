@@ -1,0 +1,7 @@
+Day 10 – Log Rotation
+- Configured logrotate for /var/log/mylab.log
+- Daily rotation
+- Compression enabled
+- Kept 7 backups
+- Fixed logrotate permission issue using `su root adm`
+- Learned secure log rotation practices

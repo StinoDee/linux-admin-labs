@@ -1,0 +1,12 @@
+Day 7 – Log Analysis
+
+- /var/log/auth.log tracks sudo, login, and authentication events
+- last shows login history from wtmp
+- lastb shows failed login attempts from btmp
+- CRON jobs appear as root sessions
+- Some logs are binary and better viewed with journalctlDay 7 – Log Analysis
+
+- auth.log records authentication events
+- sudo activity logged and traceable
+- last shows login history
+- lastb shows failed login attempts
