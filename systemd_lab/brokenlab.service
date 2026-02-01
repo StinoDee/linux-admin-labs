@@ -1,0 +1,13 @@
+[Unit]
+Description=Broken Lab Service
+After=network.target
+
+[Service]
+[Service]
+Type=oneshot
+ExecStart=/bin/echo "Broken lab fixed"
+RemainAfterExit=yes
+
+
+[Install]
+WantedBy=multi-user.target

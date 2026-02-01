@@ -1,0 +1,2 @@
+Day 11: Mastered journalctl — system logs, services, cron, boots, and error filtering
+git commit -m "Day 11: journalctl basics – logs, services, cron, boots, and errors"

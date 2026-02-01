@@ -1,0 +1,11 @@
+Day 11 – systemd troubleshooting
+
+- Created a broken service with invalid ExecStart
+- Observed status=203/EXEC
+- Used journalctl -u to debug
+- Fixed ExecStart
+- Learned about:
+  - Restart=always pitfalls
+  - start-limit-hit protection
+  - systemctl reset-failed
+  - Type=oneshot vs long-running services
