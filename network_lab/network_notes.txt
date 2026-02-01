@@ -1,0 +1,15 @@
+Day 13 – Linux Networking Basics
+
+Commands used:
+- ip addr
+- ip link
+- ip route
+- ss -tuln
+- ss -tulpn
+- ping
+
+Key learnings:
+- ip addr shows interfaces and IPs
+- ip route controls traffic flow
+- ss replaces netstat
+- Ports map directly to running services
