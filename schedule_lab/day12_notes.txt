@@ -1,0 +1,11 @@
+Day 12 – Scheduling (Cron vs systemd timers)
+
+- Created scheduling lab folder
+- Verified systemd unit files before copying
+- Learned difference between:
+  - cron jobs
+  - systemd timers
+- systemd requires:
+  - .service
+  - .timer
+- Linux commands fail if paths or names are incorrect
