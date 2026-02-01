@@ -1,0 +1,20 @@
+Day 12 – systemd Debugging Lab
+
+Service: brokenlab.service
+
+Initial failure:
+- ExecStart pointed to a non-existent binary
+- systemd returned status=203/EXEC
+- Service entered restart loop and hit start-limit
+
+Debugging steps:
+- systemctl status brokenlab
+- journalctl -u brokenlab
+
+Fix applied:
+- Corrected ExecStart to a valid command
+- Reloaded systemd daemon
+- Restarted service
+
+Key lesson:
+systemctl status + journalctl are essential for diagnosing service failures.
