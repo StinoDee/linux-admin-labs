@@ -1,0 +1,13 @@
+Day 14 – Network Troubleshooting
+
+Commands:
+- ip addr
+- ip route
+- ping (layered tests)
+- ss -tuln / ss -tulpn
+- resolvectl status
+
+Key concepts:
+- Troubleshoot from local → gateway → internet → DNS
+- IP works but DNS fails = resolver issue
+- ss replaces netstat for port diagnostics
