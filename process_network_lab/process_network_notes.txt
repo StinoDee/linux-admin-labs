@@ -1,0 +1,16 @@
+Day 15 – Process, Network and Service Correlation
+
+Flow:
+Port → PID → Process → systemd Service
+
+Commands:
+- ss -tulpn
+- ps -fp
+- systemctl status
+- /proc/PID inspection
+
+Key insight:
+Services manage processes; processes own ports.
+Restarting a service changes PID but keeps the port.
+
+/proc/<PID>/fd requires root if the process is owned by root.
