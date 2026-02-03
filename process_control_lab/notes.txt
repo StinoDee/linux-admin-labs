@@ -1,0 +1,18 @@
+Day 16 – Process Control & Signals
+
+- Signals control process behavior
+- SIGTERM is safe, SIGKILL is force
+- nice/renice manage CPU priority
+- Zombie processes need parent cleanup
+- strace shows real system calls
+
+- Verified SIGSTOP puts process in T (stopped) state
+- SIGCONT resumes execution
+- Processes may exit naturally before kill is issued
+"No such process" means PID no longer exists
+
+- renice only works on existing processes
+- Processes may exit before priority change
+- nice sets priority at launch
+- renice modifies running processes
+- strace (not trace) is used for syscall tracing
