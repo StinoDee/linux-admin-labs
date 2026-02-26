@@ -1,0 +1,9 @@
+Day 30 – Mini Container with unshare
+
+✔ unshare creates new namespaces
+✔ PID namespace isolates processes
+✔ Mount namespace isolates filesystem
+✔ UTS namespace isolates hostname
+✔ chroot changes root filesystem
+✔ Containers are isolated Linux processes
+✔ Docker is automation around these primitives
