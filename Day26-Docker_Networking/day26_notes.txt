@@ -1,0 +1,24 @@
+DAY 26 – DOCKER NETWORKING SUMMARY
+
+1. Bridge Network:
+- A bridge network is the default type of user-defined Docker network.
+- It allows containers to communicate with each other on the same network.
+- Each container gets a private IP and connects via the bridge.
+- Supports custom subnets and gateways.
+
+2. DNS Resolution:
+- Docker provides an embedded DNS server (127.0.0.11) for containers on the same user-defined bridge network.
+- Containers can resolve each other by name (container_name) instead of IP.
+- Works only when containers are on the same network.
+
+3. Isolation:
+- Containers on different networks cannot communicate unless explicitly connected.
+- Default bridge network isolates containers by default.
+- Isolation enhances security and prevents unwanted communication.
+
+4. Network Connect:
+- Running containers can be attached to a network dynamically using:
+  docker network connect <network_name> <container_name>
+- Containers can also be detached from a network with:
+  docker network disconnect <network_name> <container_name>
+- This allows flexible multi-container communication without restarting containers.
