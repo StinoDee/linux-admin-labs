@@ -1,0 +1,65 @@
+DAY 24 — BUILD YOUR OWN DOCKERFILE
+==================================
+
+What is a Dockerfile?
+---------------------
+A Dockerfile is a blueprint used to build a Docker image.
+It contains step-by-step instructions for creating a container image.
+
+Basic Structure of a Dockerfile
+--------------------------------
+1. FROM        → Base image
+2. WORKDIR     → Set working directory
+3. COPY        → Copy files into container
+4. RUN         → Install packages / run commands
+5. EXPOSE      → Open a port
+6. CMD         → Default command to run
+
+Example Dockerfile (Python Flask App)
+--------------------------------------
+
+FROM python:3.11-slim
+
+WORKDIR /app
+
+COPY requirements.txt .
+
+RUN pip install --no-cache-dir -r requirements.txt
+
+COPY . .
+
+EXPOSE 5000
+
+CMD ["python", "app.py"]
+
+Key Concepts Learned
+--------------------
+
+✔ Images are built in layers
+✔ Each instruction creates a new layer
+✔ Docker caches layers to speed up builds
+✔ Smaller base images = smaller final image
+✔ .dockerignore prevents unnecessary files from being copied
+✔ Containers should be lightweight and single-purpose
+
+Build Command
+-------------
+
+docker build -t myapp .
+
+Run Command
+-----------
+
+docker run -p 5000:5000 myapp
+
+Why Dockerfiles Matter
+----------------------
+
+• Reproducible environments
+• Portable applications
+• Consistent deployments
+• Foundation for Docker Compose
+• Required for production systems
+
+Status:
+Day 24 Completed — Custom Image Built Successfully

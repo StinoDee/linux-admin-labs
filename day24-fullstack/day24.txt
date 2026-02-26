@@ -1,0 +1,32 @@
+Day 24 – Fullstack Backend Lessons
+
+1. Docker Basics Recap:
+   - Containers vs Images
+   - OverlayFS and Copy-on-Write
+   - Why containers are disposable
+   - Volumes for persistent storage
+
+2. Setting Up Backend:
+   - Created a Python Flask app
+   - Listened on port 5000 inside the container
+   - Used `0.0.0.0` to allow external connections
+
+3. Database Integration:
+   - Used PostgreSQL 16 in Docker
+   - Environment variables: POSTGRES_USER, POSTGRES_PASSWORD, POSTGRES_DB
+   - Created named volume for data persistence
+
+4. Docker Compose:
+   - Defined services: web + db
+   - Mapped host ports to container ports (5001->5000 for web)
+   - Ensured depends_on for startup order
+
+5. Troubleshooting:
+   - curl hangs if app not listening on 0.0.0.0
+   - Docker port conflicts cause connection refused
+   - Check `docker ps`, `docker logs`, `lsof -i :port` for debugging
+
+6. Testing:
+   - Verified Flask endpoint: `curl localhost:5001`
+   - Confirmed DB is running: `docker ps` shows postgres container
+
