@@ -1,0 +1,8 @@
+Day 29 – Container Internals
+
+✔ Namespaces (PID, NET, MNT, UTS, IPC)
+✔ cgroups resource limits
+✔ overlayfs storage driver
+✔ Containers are isolated processes
+✔ Copy-on-write filesystem
+✔ docker inspect and /proc analysis
