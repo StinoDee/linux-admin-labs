@@ -1,0 +1,10 @@
+# Enter new mount namespace
+sudo unshare -m bash
+
+# List mounts in the new namespace
+mount | grep /proc
+
+# Test temporary mounts without affecting host filesystem
+mkdir ~/mnt_test
+sudo mount -o bind /tmp ~/mnt_test
+ls ~/mnt_test

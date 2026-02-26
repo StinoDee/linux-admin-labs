@@ -1,0 +1,11 @@
+# Memory info
+free -h
+
+# CPU usage top processes
+top
+
+# Top 10 memory-consuming processes
+ps aux --sort=-%mem | head -10
+
+# Exercise: Identify top 3 CPU-consuming processes
+ps aux --sort=-%cpu | head -3

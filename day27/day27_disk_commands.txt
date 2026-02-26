@@ -1,0 +1,11 @@
+# Disk usage per folder
+du -h --max-depth=1
+
+# Disk space & filesystem type
+df -hT
+
+# Check inodes
+df -i
+
+# Exercise: Top 5 largest directories in linux_lab
+du -sh ~/linux_lab/* | sort -rh | head -5

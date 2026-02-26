@@ -1,0 +1,8 @@
+# List all listening TCP/UDP ports
+ss -tuln
+
+# Show processes using ports
+ss -tulnp
+
+# Exercise: Find process using port 22
+ss -tulnp | grep :22
