@@ -1,0 +1,71 @@
+DAY 25 — BUILD FULL STACK WITH DOCKER COMPOSE
+=============================================
+
+Project Goal
+------------
+Connect a backend application to a database using Docker Compose.
+
+Architecture
+------------
+Client (curl / browser)
+        ↓
+NGINX (reverse proxy)
+        ↓
+Flask Web App (Python)
+        ↓
+PostgreSQL Database
+
+Services Used
+-------------
+
+1. web  → Flask application
+2. db   → PostgreSQL database
+3. nginx (optional if added) → Reverse proxy
+
+Key Concepts Learned
+--------------------
+
+✔ Multi-container applications
+✔ Service-to-service communication
+✔ Docker Compose networking
+✔ Internal DNS (service names like "db")
+✔ Environment variables
+✔ Container logs debugging
+✔ Rebuilding services properly
+✔ Port mapping vs internal ports
+
+Important Lessons
+-----------------
+
+• Containers communicate using service names
+• "localhost" inside container ≠ host machine
+• Port 5432 is internal between containers
+• Use docker compose logs to debug
+• If network breaks → docker compose down -v
+
+Common Debug Commands
+---------------------
+
+docker compose ps
+docker compose logs web
+docker compose logs db
+docker compose exec web bash
+docker network ls
+docker network inspect <network>
+
+Build & Run
+-----------
+
+docker compose up --build -d
+
+Test
+----
+
+curl localhost:5001
+
+Status
+------
+Full Stack Application Running
+Web connected to Database successfully
+
+Day 25 Completed — Real DevOps Architecture

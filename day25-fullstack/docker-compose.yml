@@ -1,0 +1,29 @@
+version: "3.9"
+
+services:
+  web:
+    image: day25-fullstack-web
+    build: .
+    container_name: day25-fullstack-web
+    ports:
+      - "5001:5000"  # Host 5001 -> Container 5000
+    environment:
+      - FLASK_ENV=development
+    depends_on:
+      - db
+
+  db:
+    image: postgres:16
+    container_name: day25-fullstack-db
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: day25
+    ports:
+      - "5432:5432"
+    volumes:
+      - day25_db_data:/var/lib/postgresql/data
+
+volumes:
+  day25_db_data:
+
