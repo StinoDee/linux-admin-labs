@@ -1,0 +1,10 @@
+Day 33 – Docker Secrets & Environment Variables (Swarm)
+
+- Initialize single-node Swarm: docker swarm init --advertise-addr <IP>
+- Create secret: echo "secret" | docker secret create name -
+- Use secrets in compose under 'secrets' block
+- Access inside container: /run/secrets/<name>
+- Environment variables via .env file and ${VAR_NAME} in compose
+- Deploy stack: docker stack deploy -c docker-compose.yml <stack_name>
+- Clean up: docker stack rm <stack_name>, docker secret rm <name>
+- Secrets are encrypted at rest and safer than plain env vars
