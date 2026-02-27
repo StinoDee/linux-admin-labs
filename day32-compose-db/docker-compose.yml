@@ -1,0 +1,22 @@
+services:
+  db:
+    image: postgres:15
+    container_name: day32-db
+    restart: always
+    environment:
+      POSTGRES_USER: admin
+      POSTGRES_PASSWORD: secret
+      POSTGRES_DB: day32db
+    volumes:
+      - day32-db-data:/var/lib/postgresql/data
+
+  app:
+    image: nginx
+    container_name: day32-app
+    ports:
+      - "8081:80"
+    depends_on:
+      - db
+
+volumes:
+  day32-db-data:

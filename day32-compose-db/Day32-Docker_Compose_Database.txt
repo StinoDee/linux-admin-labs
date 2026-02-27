@@ -1,0 +1,30 @@
+Day 32 – Docker Compose with Persistent Database
+
+Docker Compose manages multi-container apps.
+
+Services can depend on each other.
+
+Postgres data stored in named volume.
+
+Volumes survive container restart.
+
+Compose auto-creates:
+
+Network
+
+Volume
+
+docker compose down removes containers.
+
+docker compose down -v removes volumes.
+
+Real-world production setup:
+App + Database + Persistent Storage.
+
+There are 3 levels of Docker issues:
+
+User permission problem
+
+Docker daemon problem
+
+Kernel / runtime problem
