@@ -1,0 +1,32 @@
+Day 31 – Docker Volumes
+
+Containers are ephemeral.
+
+Writable layer is temporary.
+
+Volumes provide persistent storage.
+
+Volumes survive container deletion.
+
+Types of storage:
+
+Volumes (recommended)
+
+Bind mounts
+
+tmpfs
+
+Volume commands:
+
+docker volume create
+
+docker volume ls
+
+docker volume inspect
+
+docker volume rm
+
+docker volume prune
+
+Used for databases, uploads, logs, production apps.
+
