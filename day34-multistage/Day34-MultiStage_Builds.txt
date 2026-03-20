@@ -1,0 +1,9 @@
+Day 34 – Multi-Stage Docker Builds
+
+- Use multiple FROM statements
+- First stage = build environment
+- Second stage = production image
+- COPY --from=builder transfers files
+- Reduces image size and improves security
+- Common for Node, React, frontend apps
+- Final image contains only runtime dependencies
